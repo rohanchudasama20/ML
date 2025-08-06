@@ -8,6 +8,9 @@ plt.imshow(img)
 # plt.yticks([])
 plt.axis('off')
 
+a,b,c=img.shape[:3]
+print(a,b,c)
+
 #give the RGB color
 img=cv2.imread('car.jpg')
 img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
