@@ -235,5 +235,3 @@ plt.subplot(1, 2, 2), plt.imshow(sharped_img), plt.title('sharped_img'), plt.axi
 
 
 
-img = cv2.imread('aerial.jpg')
-img = cv2.cvtCccolor(img, cv2.COLOR_BGR2RGgbB)
