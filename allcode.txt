@@ -260,3 +260,32 @@ cv2.imshow('Erosion',erosion)
 cv2.imshow('Dilation',dilation)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+#window will bw full size of particular image (Erosion and Dilation)
+import cv2
+import numpy as np
+
+# Load image
+img = cv2.imread('numberplate.jpg')
+
+k1 = np.ones((3, 3), np.uint8)
+
+# Erosion
+erosion = cv2.erode(img, k1, iterations=1)
+
+# Dilation
+dilation = cv2.dilate(img, k1, iterations=1)
+
+# Make windows resizable
+cv2.namedWindow('Source', cv2.WINDOW_NORMAL)
+cv2.namedWindow('Erosion', cv2.WINDOW_NORMAL)
+cv2.namedWindow('Dilation', cv2.WINDOW_NORMAL)
+
+# Show images
+cv2.imshow('Source', img)
+cv2.imshow('Erosion', erosion)
+cv2.imshow('Dilation', dilation)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
